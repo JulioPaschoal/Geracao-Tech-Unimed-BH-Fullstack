@@ -1,3 +1,4 @@
+import { ReplacePipe } from './pipe/replace.pape';
 import { CourseListComponent } from './courses/course-list.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -10,7 +11,8 @@ import { StarComponent } from './star/star.component';
   declarations: [
     AppComponent,
     CourseListComponent,
-    StarComponent
+    StarComponent,
+    ReplacePipe
   ],
   imports: [
     BrowserModule,
