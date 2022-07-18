@@ -4,12 +4,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '', component: UsersListComponent
-  },
-  {
-    path: 'form', component: UserFormComponent
-  }
+  { path: '', component: UsersListComponent},
+  { path: 'form', component: UserFormComponent},
+  { path: 'form/:id', component: UserFormComponent},
+  //{ path: 'todo', component: TodoListComponent},
+  //{ path: 'data-binding', component: DataBindingComponent },
+  //{ path: 'pipes', component: PipesExampleComponent },
 ];
 
 @NgModule({

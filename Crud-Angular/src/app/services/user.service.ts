@@ -28,5 +28,20 @@ export class UserService {
     return this.httpClient.post<User>(this.apiUrl, user, this.httpOptions);
   }
 
+    // DELETE EXCLUI USUARIO DO BANCO \\
+    deleteUser(id: number):Observable<User> {
+      return this.httpClient.delete<User>(`${this.apiUrl}/id/${id}`)
+    }
+  
+    // UPDATE EDITA USUARIO \\
+    updateUser(id: string, user: User):Observable<User> {
+      return this.httpClient.put<User>(`${this.apiUrl}/id/${id}`, user, this.httpOptions);
+    }
+  
+    // LISTA UM UNICO USUARIO \\
+    getUser(id: string):Observable<User[]> {
+      return this.httpClient.get<User[]>(`${this.apiUrl}/id/${id}`)
+    }
+
 
 }
